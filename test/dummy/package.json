@@ -1,0 +1,14 @@
+{
+  "name": "test_app",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "5.2.1",
+    "webpack-bundle-analyzer": "^4.2.0",
+    "pad-left": "2.1.0"
+  },
+  "scripts": {
+    "analyze": "node_modules/.bin/webpack --config config/webpack/production.js --profile --json > public/packs/stats.json && node_modules/.bin/webpack-bundle-analyzer public/packs/stats.json"
+  }
+}
