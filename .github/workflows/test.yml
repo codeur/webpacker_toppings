@@ -17,12 +17,13 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
 
-      - name: Install dummy dependencies
-        run: cd test/dummy && bundle install && yarn install
-
       - name: Install gems
         run: |
+          gem install bundler -v=1.17.3
           bundle install
+
+      - name: Install dummy dependencies
+        run: cd test/dummy && bundle install && yarn install
 
       - name: Run tests
         run: bin/test
