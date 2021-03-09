@@ -28,7 +28,7 @@ end
 ```
 
 ### Helpers
-- [`WebpackerToppings::Helpers::Packs`](https://github.com/codeur/parallel_coverage/blob/main/lib/webpacker_toppings/helpers/packs.rb)
+- [`WebpackerToppings::Helpers::Packs`](https://github.com/codeur/webpacker_toppings/blob/main/lib/webpacker_toppings/helpers/packs.rb)
 
 
 
