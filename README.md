@@ -55,11 +55,6 @@ You just have to run default command:
 ```bash
 rake release
 ```
-Else, to publish a new version of this gem, you'll need to build it with gem build parallel_coverage.gemspec and then push it manually:
-
-```bash
-gem push parallel_coverage-X.X.X.gem
-```
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
