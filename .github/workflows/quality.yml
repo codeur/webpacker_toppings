@@ -2,10 +2,6 @@ name: Quality audit
 
 on: [pull_request]
 
-env:
-  GHR_TOKEN: ${{ secrets.GHR_TOKEN }}
-  FONTAWESOME_NPM_AUTH_TOKEN: ${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}
-
 jobs:
   rubocop:
     name: rubocop
