@@ -1,0 +1,35 @@
+name: Test
+
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby: ['2.6', '2.7']
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Ruby ${{ matrix.ruby }}
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+
+      - name: Install dummy dependencies
+      - run: cd test/dummy && bundle install && yarn install
+
+      - name: Install gems
+        run: |
+          bundle install
+
+      - name: Run tests
+        run: bin/test
+
+      - name: Upload log if failure
+        uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: test.log
+          path: test/dummy/log/test.log
