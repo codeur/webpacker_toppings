@@ -40,20 +40,25 @@ end
   cd test/dummy && bundle install && yarn install && cd ../..
   bin/test
 ```
+## Release
+Before all, configure your credentials for RubyGems :
 
-## Release (for Codeur dev team members)
-Before all, configure your credentials for `dev-codeur` RubyGems account:
+ 1. Login to RubyGems
+ 2. Create a token which have rights to push gems (https://rubygems.org/profile/api_keys)
+ 3. Add it to your config:
+   ```
+   echo ":rubygems_api_key: YOUR_API_KEY" >> ~/.gem/credentials
+   ```
 
-Login to RubyGems with the `dev-codeur` account
-Create a token which have rights to push gems (https://rubygems.org/profile/api_keys)
-Add it to your config:
-```bash
-echo ":rubygems_api_key: YOUR_API_KEY" >> ~/.gem/credentials
-```
 You just have to run default command:
-
-```bash
+```
 rake release
+```
+
+Else, to publish a new version of this gem, you'll need to build it with
+`gem build webpacker_toppings.gemspec` and then push it manually:
+```
+gem push webpacker_toppings-X.X.X.gem
 ```
 
 ## License
