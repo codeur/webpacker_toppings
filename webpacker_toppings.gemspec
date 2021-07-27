@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir['lib/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
   spec.required_ruby_version = '~> 2.6'
-  spec.add_dependency 'rails', '>= 6.0.3'
+  spec.add_dependency 'rails', '>= 6.1.3.2'
   spec.add_dependency 'webpacker', '~> 5.0'
 
   spec.add_development_dependency 'rubocop-codeur'
